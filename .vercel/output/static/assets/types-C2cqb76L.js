@@ -1,1 +1,0 @@
-var e=[`admin`,`manager`,`mechanic`,`vehicle_user`,`viewer`],t=[`pending`,`accepted`,`rejected`,`in_workshop`,`work_complete`,`delivered`],n=[`not_started`,`in_progress`,`done`];function r(e){return e===`admin`||e===`manager`}export{r as i,e as n,t as r,n as t};
