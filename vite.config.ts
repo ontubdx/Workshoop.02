@@ -161,7 +161,7 @@ export default defineConfig(({ command, isPreview }) => ({
     
   },
   resolve: { tsconfigPaths: true },
-  ssr: { noExternal: ["tslib"] },
+  ssr: { noExternal: [/^@radix-ui\//, "tslib"] },
   plugins: [
     pgliteBootstrapPlugin(),
     // Before tanstackStart so /auth/popup never falls through to the SPA.
@@ -178,8 +178,7 @@ export default defineConfig(({ command, isPreview }) => ({
       ? [
           nitro({
             preset: "vercel",
-            noExternals: ["tslib"],
-            traceDeps: ["tslib"],
+            noExternals: [/^@radix-ui\//, "tslib"],
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
