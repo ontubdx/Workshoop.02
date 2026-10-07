@@ -150,11 +150,17 @@ export default defineConfig(({ command, isPreview }) => ({
     host: "0.0.0.0",
     port: 8080,
     strictPort: true,
+
+
+    
   },
   preview: {
     host: "127.0.0.1",
     port: 8081,
     strictPort: true,
+
+
+    
   },
   resolve: { tsconfigPaths: true },
   plugins: [
@@ -167,6 +173,8 @@ export default defineConfig(({ command, isPreview }) => ({
     grokPwaPlugin(),
     tailwindcss(),
     tanstackStart(),
+
+    
     ...(command === "build" || isPreview
       ? [
           nitro({
@@ -182,3 +190,9 @@ export default defineConfig(({ command, isPreview }) => ({
     viteReact(),
   ],
 }));
+
+
+ssr: {
+    noExternal: ['tslib', '@radix-ui/*']
+  }
+})
