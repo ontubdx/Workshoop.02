@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Barlow", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Noto Sans Bengali", "Barlow", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: #f3efe6;
+  --color-foreground: #1c1915;
+  --color-card: #fffdf8;
+  --color-card-foreground: #1c1915;
+  --color-popover: #fffdf8;
+  --color-popover-foreground: #1c1915;
+  --color-primary: #0f5c4c;
+  --color-primary-foreground: #f4f1ea;
+  --color-secondary: #ebe4d6;
+  --color-secondary-foreground: #1c1915;
+  --color-muted: #ebe4d6;
+  --color-muted-foreground: #6b645a;
+  --color-accent: #d7e4df;
+  --color-accent-foreground: #0b3d33;
+  --color-destructive: #9b2c2c;
+  --color-destructive-foreground: #fef2f2;
+  --color-border: #ddd6c8;
+  --color-input: #d8d0c0;
+  --color-ring: #0f5c4c;
+  --color-sidebar: #1c1915;
+  --color-sidebar-foreground: #f3efe6;
+  --color-sidebar-muted: #9a9388;
+  --color-sidebar-accent: #2a2620;
+  --color-sidebar-border: #322e28;
+  --color-success: #1d6b4a;
+  --color-warning: #8a5a12;
+  --color-info: #2c4a6e;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 10px;
+
+  --shadow-card: 0 1px 0 rgba(28, 25, 21, 0.04), 0 10px 28px -18px rgba(28, 25, 21, 0.35);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  html[lang="bn"] body {
+    font-family: "Noto Sans Bengali", var(--font-sans);
+  }
+
+  html[lang="bn"] h1,
+  html[lang="bn"] h2,
+  html[lang="bn"] h3,
+  html[lang="bn"] .font-display {
+    font-family: "Noto Sans Bengali", var(--font-display);
+    letter-spacing: 0;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .print-hidden {
+    display: none !important;
+  }
+  .print-only {
+    display: revert !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+.print-only {
+  display: none;
+}

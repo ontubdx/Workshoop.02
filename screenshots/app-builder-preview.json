@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Workshop Management System",
+      "hasCanvas": false,
+      "bodyTextLen": 435,
+      "bodyTextHash": "11e1f053be79410ca08541c12b2b2f5fbdf821fca6557de88a5e56d2200173ef",
+      "bodyTextPrefix": "ফ্লিট ওয়ার্কশপ অটোমোবাইল ও ট্রান্সপোর্ট বাং EN যে গাড়িই বেতে ঢ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Workshop Management System",
+      "hasCanvas": false,
+      "bodyTextLen": 157,
+      "bodyTextHash": "aa155ee0771935c4cc158188f82c627d6876fe27a9f45d1f9da094a3933d910f",
+      "bodyTextPrefix": "ফ্লিট ওয়ার্কশপ সাইন ইন যে গাড়িই বেতে ঢুকুক, হিসাব থাকবে। বাং E",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
